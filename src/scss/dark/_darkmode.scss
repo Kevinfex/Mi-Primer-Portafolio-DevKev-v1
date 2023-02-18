@@ -1,0 +1,137 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.dark-mode {
+
+    /* ------------------- */ 
+        // GLOBALES
+    /* ------------------- */ 
+    background-color: v.$slate-800;
+    
+    p {
+        color: v.$gray-400;
+    }
+
+    .boton {
+        &__github {
+            @include m.boton-light(v.$gray-100);
+
+            &:hover {
+                color: v.$slate-900;
+            }
+
+            width: auto;
+        }
+    }
+    .heading {
+        &__text {
+            color: v.$slate-50;
+        }
+    }
+
+    /* ------------------- */ 
+        // NAVEGACIÓN
+    /* ------------------- */ 
+    .header {
+
+        &__top,
+        &__desktop {
+            background-color: v.$slate-900;
+
+            @media (min-width: 550px) {
+                border-bottom-color: v.$slate-500;
+            }
+        }
+
+        &__imagen {
+            display: none;
+
+            &--dark {
+                display: initial;
+            }
+        }
+    }
+
+    .mobile {
+        background-color: v.$slate-800;
+
+        &__link {
+            border-top-color: v.$slate-500;
+            color: v.$slate-500;
+
+            &--active {
+                color: v.$slate-50;
+            }
+        }
+    }
+
+    .desktop {
+        &__link {
+            color: v.$slate-400;
+
+            &:hover {
+                color: v.$slate-50;
+            }
+        }
+    }
+
+    /* ------------------- */ 
+        // INICIO
+    /* ------------------- */ 
+    .home {
+        &__heading {
+            color: v.$blue-600;
+        }
+    }
+
+    .words {
+        &__text {
+            color: v.$blue-400;
+        }
+    }
+
+    .learning {
+        &__heading,
+        &__text {
+            color: v.$gray-300;
+        }
+
+        &__box {
+            border-radius: 1.5rem;
+            background: linear-gradient(145deg, #1e2239, #232943);
+            box-shadow: 11px 11px 22px #1d2137,
+                -11px -11px 22px #252b47;
+        }
+    }
+
+    .concept {
+        &__box {
+            border-color: v.$blue-600;
+            color: v.$blue-400;
+        }
+
+        &__author {
+            color: v.$blue-600;
+        }
+    }
+
+    /* ------------------- */ 
+        // HABILIDADES
+    /* ------------------- */
+    
+    .skill {
+        &__title {
+            color: v.$gray-100;
+        }
+        &__card {
+            background-color: v.$slate-700;
+            border-color: v.$slate-500;
+        }
+        &__icon {
+            mix-blend-mode: luminosity;
+        }
+        &__name {
+            color: v.$gray-100;
+        }
+    }
+}

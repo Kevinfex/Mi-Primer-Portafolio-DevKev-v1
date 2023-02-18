@@ -1,0 +1,185 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+
+    &__desktop {
+        display: none;
+
+        @media (min-width: 580px) {
+            display: initial;
+            background-color: darken(v.$gray-50, 2%);
+            border-bottom: 1px solid v.$slate-300;
+            height: 6.5rem;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+
+    &__mobile {
+        @media (min-width: 580px) {
+            display: none;
+        }
+    }
+
+    &__top {
+        height: 5rem;
+        background-color: darken(v.$gray-50, 2%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid v.$gray-500;
+        z-index: 10;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__logo {
+        width: 8.5rem;
+    }
+
+    &__imagen {
+
+        &--dark {
+            display: none;
+        }
+    }
+}
+
+
+/** MOBILE STYLES NAVEGATION **/
+.mobile {
+    height: 5.8rem;
+    background-color: v.$gray-50;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid v.$gray-500;
+    z-index: 10;
+
+    &__nav {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        column-gap: 2rem;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: 3px solid v.$slate-400;
+        height: 100%;
+        width: 5.4rem;
+        color: v.$slate-400;
+
+        &--active {
+            color: v.$slate-700;
+        }
+        &:nth-child(3) {
+            border: none;
+            //color: v.$slate-700;
+            
+
+            // i {
+            //     height: 5rem;
+            //     width: 5rem;
+            //     border: 3px solid v.$slate-700;
+            //     border-radius: 50%;
+            //     font-size: 2.5rem;
+            //     padding: .5rem;
+            //     text-align: center;
+            //     padding: .8rem 0 0 0;
+            // }
+        }
+    }
+
+    &__icon {
+        font-size: 2rem;
+        &--active {
+            font-size: 3rem;
+        }
+    }
+
+    &__text {
+        font-size: 1rem;
+        font-weight: 600;
+        padding-top: .5rem;
+    }
+}
+
+/** ESCRITORIO STYLES NAVEGATION**/
+.desktop {
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__list {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    &__link {
+        font-family: v.$fuente_headings;
+        color: v.$slate-900;
+        font-weight: 600;
+        line-height: 2;
+
+        &:hover {
+            color: v.$blue-800;
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &__icon {
+        font-size: 2rem;
+        color: v.$red-500;
+    }
+
+    &__text {
+        font-size: .9rem;
+        font-weight: 600;
+        line-height: 1;
+        padding-top: .3rem;
+        //color: v.$red-700;
+    }
+}
+
+.button {
+    &__dark-mode {
+        height: fit-content;
+        width: 3.5rem;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        font-size: 2.25rem;
+        &:hover {
+            cursor: pointer;
+        }
+        .fa-sun {
+            color: v.$amber-400;
+        }
+    }
+}

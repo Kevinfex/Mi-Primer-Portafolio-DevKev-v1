@@ -1,0 +1,80 @@
+@use 'base/variables' as v;
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+
+@mixin boton($bgColor, $colorTexto) {
+    background-color: $bgColor;
+    padding: 1.5rem 4rem;
+    color: $colorTexto;
+    font-size: 1.6rem;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+    display: block;
+    width: 100%;
+    @include tablet {
+        width: auto;
+    }
+    &:hover {
+        background-color: darken( $bgColor, 10% );
+        cursor: pointer;
+    }
+}
+
+@mixin boton-light($colorBoton) {
+    background-color: transparent;
+    padding: 1rem;
+    color: $colorBoton;
+    font-size: 1.5rem;
+    display: inline-block;
+    font-weight: 600;
+    border: 1.5px solid $colorBoton;
+    border-radius: .6rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+    display: block;
+    width: 100%;
+    @include tablet {
+        width: auto;
+    }
+    &:hover {
+        background-color: $colorBoton;
+        color: v.$slate-50;
+        cursor: pointer;
+    }
+}
+
+@mixin g-colum($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+@mixin g-row($row, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-rows: repeat($row, 1fr);
+}
+
+.boton {
+    border: 2px solid transparent ;
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Espinoza</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome - iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <link rel="stylesheet" href="public/build/css/app.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__desktop">
+            <div class="header__content contenedor">
+                <a href="/" class="header__logo">
+                    <img class="header__imagen" src="/public/build/img/Logo-K-light-mode2.svg" alt="Logo K light Mode">
+                    <img class="header__imagen--dark" src="public/build/img/Logo-K-dark-mode2.svg"
+                        alt="Logo K light Mode">
+                </a>
+                <nav class="desktop__nav">
+                    <ul class="desktop__list">
+                        <li class="desktop__item">
+                            <a href="#inicio" class="desktop__link">Inicio</a>
+                        </li>
+                        <li class="desktop__item">
+                            <a href="#skills" class="desktop__link">Skills</a>
+                        </li>                        
+                        <li class="desktop__item">
+                            <a href="#proyectos" class="desktop__link">Proyectos</a>
+                        </li>
+                        <li class="desktop__item">
+                            <a href="#sobre-mi" class="desktop__link">Sobre mi</a>
+                        </li>
+                        <li class="desktop__item">
+                            <a href="#contact" class="desktop__link contact">
+                                <i class="fa-solid fa-envelope contact__icon"></i>
+                                <span class="contact__text">Contáctame</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="buttom">
+                        <button class="button__dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__mobile">
+            <div class="header__top">
+                <div class="header__content contenedor">
+                    <a href="/" class="header__logo">
+                        <img class="header__imagen" src="/public/build/img/Logo-K-light-mode2.svg"
+                            alt="Logo K light Mode">
+                        <img class="header__imagen--dark" src="public/build/img/Logo-K-dark-mode2.svg"
+                            alt="Logo K light Mode">
+                    </a>
+                    <div class="buttom">
+                        <button class="button__dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile">
+                <nav class="mobile__nav contenedor">
+                    <a href="#sobre-mi" class="mobile__link">
+                        <i class="fa-solid fa-user mobile__icon"></i>
+                        <span class="mobile__text">Sobre mi</span>
+                    </a>
+                    <a href="#skills" class="mobile__link">
+                        <i class="fa-solid fa-rocket mobile__icon"></i>
+                        <span class="mobile__text">Skills</span>
+                    </a>
+                    <a href="#inicio" class="mobile__link mobile__link--active">
+                        <i class="fa-solid fa-house mobile__icon mobile__icon--active"></i>
+                        <!-- <span class="mobile__text">Inicio</span> -->
+                    </a>
+                    <a href="#proyectos" class="mobile__link">
+                        <i class="fa-solid fa-briefcase mobile__icon"></i>
+                        <span class="mobile__text">Proyectos</span>
+                    </a>
+                    <a href="#contacto" class="mobile__link">
+                        <i class="fa-solid fa-phone-volume mobile__icon"></i>
+                        <span class="mobile__text">Contacto</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container contenedor">
+            <div class="home">
+                <p class="home__text">¡Bienvenido! Soy</p>
+                <h1 class="home__heading">
+                    {Kevin Espinoza}
+                    <div class="words">
+                        <span class="words__text" style="--w: 14; --dw: 15ch">Web Developer.</span>
+                        <span class="words__text" style="--w: 19; --dw: 20ch">Front-end Developer.</span>
+                    </div>
+                </h1>
+                <p class="home__description">Me considero Jr. Dev, apasionado por la programación, disfruto escribir código,
+                    me encantan los desafíos y no me doy por vencido.</p>
+                <div class="home__botones boton">
+                    <a href="" class="boton__linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="" class="boton__github">
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div class="profile__box">
+                    <img class="profile__back" src="public/build/img/blob-back.svg" alt="background image">
+                    <img class="profile__image" src="public/build/img/Perfil.webp" alt="Foto Perfil Kevin Espinoza">
+                </div>
+            </div>
+            
+            <div class="learning">
+                <h2 class="learning__heading">Aprendiendo</h2>
+                <div class="learning__content">
+                    <div class="learning__box">
+                        <img src="public/build/img/skills/javascript.svg" alt="Logo JavaScript" class="learning__image">
+                        <span class="learning__text">Javascript</span>
+                    </div>
+    
+                    <div class="learning__box">
+                        <img src="public/build/img/skills/react.svg" alt="Logo React" class="learning__image">
+                        <span class="learning__text">React</span>
+                    </div>
+    
+                    <div class="learning__box">
+                        <img src="public/build/img/skills/nodejs.svg" alt="Logo Node.js" class="learning__image">
+                        <span class="learning__text">Node.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept">
+                <div class="concept__content">
+                    <div class="concept__box">
+                        <blockquote class="concept__idea">Si la vida te pone obstáculos y retos, rendirse que no sea una opción; mejor es ir pa' adelante como elefante. ¡Lucha por tu sueños!</blockquote>
+                        <span class="concept__author">— Kevin Espinoza</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="skill">
+        <div class="heading contenedor">
+            <h2 class="heading__text">
+                Habilidades
+            </h2>
+        </div>
+        
+        <div class="skill__container">
+            <div class="skill__card">
+                <img src="/public/build/img/skill-languages.svg" alt="Imagen Skill-lenguaje" class="skill__image">
+                <p class="skill__title">Lenguajes</p>
+                <ul class="skill__list">
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/html-5.svg" alt="skill icon HTML" class="skill__icon">
+                        <p class="skill__name">HTML</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/css-3.svg" alt="skill icon CSS" class="skill__icon">
+                        <p class="skill__name">CSS</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/sass-1.svg" alt="skill icon SASS" class="skill__icon">
+                        <p class="skill__name">SASS</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/javascript.svg" alt="skill icon JavaScript" class="skill__icon">
+                        <p class="skill__name">JavaScript</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/typescript.svg" alt="skill icon typeScript" class="skill__icon">
+                        <p class="skill__name">typeScript</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/php.svg" alt="skill icon PHP" class="skill__icon">
+                        <p class="skill__name">PHP</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skill__card">
+                <img src="/public/build/img/skill-libraries.svg" alt="Imagen Skill-librerias" class="skill__image">
+                <p class="skill__title">Librerias y Frameworks</p>
+                <ul class="skill__list">
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/react.svg" alt="skill icon React" class="skill__icon">
+                        <p class="skill__name">React</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/nodejs.svg" alt="skill icon Node.Js" class="skill__icon">
+                        <p class="skill__name">Node.Js</p>
+                    </li>
+                    
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/bootstrap.svg" alt="skill icon Bootstrap" class="skill__icon">
+                        <p class="skill__name">Bootstrap</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/tailwind-css.svg" alt="skill icon Tailwind" class="skill__icon">
+                        <p class="skill__name">Tailwind</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skill__card">
+                <img src="/public/build/img/skill-tools.svg" alt="Imagen Skill-lenguaje" class="skill__image">
+                <p class="skill__title">Tools & Platforms</p>
+                <ul class="skill__list">
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/git-icon.svg" alt="skill icon Git" class="skill__icon">
+                        <p class="skill__name">Git</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/npm.svg" alt="skill icon NPM" class="skill__icon">
+                        <p class="skill__name">NPM</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/gulp.svg" alt="skill icon Gulp" class="skill__icon skill__icon--width">
+                        <p class="skill__name">Gulp</p>
+                    </li>
+                    <li class="skill__item">
+                        <img src="/public/build/img/skills/composer.svg" alt="skill icon Composer" class="skill__icon">
+                        <p class="skill__name">Composer</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="project">
+        <div class="project__container contenedor">
+            <div class="heading">
+                <h2 class="heading__text">
+                    Proyectos
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <script src="public/build/js/app.js"></script>
+
+</body>
+
+</html>
