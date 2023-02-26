@@ -156,6 +156,7 @@
     &__icon {
         font-size: 2rem;
         color: v.$red-500;
+        animation: floating 2s infinite ease-in-out;
     }
 
     &__text {
@@ -163,7 +164,6 @@
         font-weight: 600;
         line-height: 1;
         padding-top: .3rem;
-        //color: v.$red-700;
     }
 }
 
@@ -181,5 +181,30 @@
         .fa-sun {
             color: v.$amber-400;
         }
+    }
+}
+
+/** ANIMACIONES **/
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    25% {
+        transform: translate(1px, 1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, -1px) rotate(-1deg);
+    }
+    75% {
+        transform: translate(2px, -1px) rotate(2deg);
+    }
+    100% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+    }
+}
+
+@keyframes floating {
+    50% {
+        transform: translateY(-4px);
     }
 }
