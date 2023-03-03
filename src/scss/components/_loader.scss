@@ -1,0 +1,33 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.loader {
+    position: fixed;
+    z-index: 10000;
+  width: 100%;
+  height: 100vh;
+  background-color: v.$gray-50;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  &__custom {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, v.$blue-700 94%, #0000) top/8px 8px
+        no-repeat,
+      conic-gradient(#0000 30%, v.$blue-700);
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 8px),
+      #000 0
+    );
+    animation: loading 1s infinite linear;
+  }
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(1turn);
+  }
+}

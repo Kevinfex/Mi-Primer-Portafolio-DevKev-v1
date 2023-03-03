@@ -1,11 +1,14 @@
+const divLoader = document.querySelector('.loader');
+window.addEventListener('load', ()=> {
+    divLoader.style.display = 'none';
+});
+
 document.addEventListener('DOMContentLoaded', function () {
 
     //eventListeners();
 
     darkMode();
 });
-
-
 
 function darkMode() {
     const botonDarkMode = document.querySelectorAll('.button__dark-mode');
@@ -27,10 +30,4 @@ function darkMode() {
         });
         
     }));
-
-    // botonDarkMode.addEventListener('click', function() {
-    //     
-
-        
-    // });
 }
