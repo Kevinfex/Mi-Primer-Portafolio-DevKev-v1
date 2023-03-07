@@ -28,7 +28,7 @@ function typedText() {
         stringsElement: '#array-words', // ID del elemento que contiene cadenas de texto a mostrar
         typeSpeed: 75, // Velocidad en ms para poner una letra
         startDelay: 300, // Tiempo de retrazo en iniciar la animación(escritura inicia y termina y vuelve a iniar). 
-        backSpeed: 75, // Velocidad en ms para borrar una letra
+        backSpeed: 30, // Velocidad en ms para borrar una letra
         smartBackspace: false, // Elimina solamente las palabras que son diferentes a una cadena de texo u oración
         // shuffle: false, // Orden aleatorio en mostrar los textos. false recomendado
         backDelay: 600, // Tiempo de espera despues de que termina de escribir una palabra
