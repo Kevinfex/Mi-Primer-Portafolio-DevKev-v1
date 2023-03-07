@@ -1,0 +1,7 @@
+@use 'base/variables' as v;
+
+.dark-mode {
+    .loader {
+        background-color: v.$slate-800;
+    }
+}
