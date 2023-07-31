@@ -1,54 +1,65 @@
-@use 'variables' as v;
+@use "variables" as v;
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
 }
 body {
-    font-family: v.$fuente_textos;
-    font-size: 1.6rem;
-    min-height: 100%;
-    background-color: v.$gray-50;
+  font-family: v.$fuente_textos;
+  font-size: 1.6rem;
+  min-height: 100%;
+  background-color: v.$gray-50;
 }
 .contenedor {
-    width: 92%;
-    max-width: 950px;
-    margin: 0 auto;
+  width: 92%;
+  max-width: 950px;
+  margin: 0 auto;
 }
 .contenedor-sm {
-    max-width: 70rem;
-    margin: 0 auto;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 ul {
-    padding: 0;
+  padding: 0;
 }
 
 .heading {
-    &__text {
-        text-align: center;
-        margin-bottom: 5rem;
-        color: v.$slate-900;
-        position: relative;
-        &::after {
-            content: '';
-            position: absolute;
-            width: 10rem;
-            height: .5rem;
-            background-color: v.$blue-600;
-            inset: 0;
-            margin: 3.7rem auto;
-            border-radius: 1px;
-        }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__text {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    color: v.$slate-900;
+    position: relative;
+
+    background-image: linear-gradient(351deg, v.$blue-400 23%, v.$blue-600 87%, v.$blue-800 102%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15rem;
+      height: 0.5rem;
+      background-color: v.$slate-700;
+      inset: 0;
+      margin: 5rem auto;
+      border-radius: 1px;
     }
+  }
 }

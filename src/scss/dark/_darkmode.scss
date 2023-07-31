@@ -1,138 +1,148 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
+@use "base/variables" as v;
+@use "base/mixins" as m;
 
 .dark-mode {
+  /* ------------------- */
+  // GLOBALES
+  /* ------------------- */
+  background-color: v.$slate-800;
 
-    /* ------------------- */ 
-        // GLOBALES
-    /* ------------------- */ 
+  p {
+    color: v.$gray-400;
+  }
+
+  .boton {
+    &__github {
+      @include m.boton-light(v.$gray-100);
+
+      &:hover {
+        color: v.$slate-900;
+      }
+
+      width: auto;
+    }
+  }
+  .heading {
+    &__text {
+      background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      &::after {
+        background-color: v.$blue-700;
+      }
+    }
+  }
+
+  /* ------------------- */
+  // NAVEGACIÓN
+  /* ------------------- */
+  .header {
+    &__top,
+    &__desktop {
+      background-color: v.$slate-900;
+
+      @media (min-width: 550px) {
+        border-bottom-color: v.$slate-500;
+      }
+    }
+
+    &__imagen {
+      display: none;
+
+      &--dark {
+        display: initial;
+      }
+    }
+  }
+
+  .mobile {
     background-color: v.$slate-800;
-    
-    p {
-        color: v.$gray-400;
+
+    &__link {
+      border-top-color: v.$slate-500;
+      color: v.$slate-500;
+
+      &--active {
+        color: v.$slate-50;
+      }
+    }
+  }
+
+  .desktop {
+    &__link {
+      color: v.$slate-400;
+
+      &:hover {
+        color: v.$slate-50;
+      }
+    }
+  }
+
+  /* ------------------- */
+  // INICIO
+  /* ------------------- */
+  .home {
+    &__heading {
+      color: v.$blue-600;
+    }
+  }
+
+  .words {
+    color: v.$slate-200;
+    &__text {
+      color: v.$blue-400;
+    }
+  }
+
+  .learning {
+    &__heading,
+    &__text {
+      color: v.$gray-300;
     }
 
-    .boton {
-        &__github {
-            @include m.boton-light(v.$gray-100);
-
-            &:hover {
-                color: v.$slate-900;
-            }
-
-            width: auto;
-        }
+    &__box {
+      border-radius: 1.5rem;
+      background: linear-gradient(145deg, #1e2239, #232943);
+      box-shadow: 11px 11px 22px #1d2137, -11px -11px 22px #252b47;
     }
-    .heading {
-        &__text {
-            color: v.$slate-50;
-        }
+  }
+
+  .concept {
+    &__box {
+      border-color: v.$blue-600;
+      color: v.$blue-400;
     }
 
-    /* ------------------- */ 
-        // NAVEGACIÓN
-    /* ------------------- */ 
-    .header {
-
-        &__top,
-        &__desktop {
-            background-color: v.$slate-900;
-
-            @media (min-width: 550px) {
-                border-bottom-color: v.$slate-500;
-            }
-        }
-
-        &__imagen {
-            display: none;
-
-            &--dark {
-                display: initial;
-            }
-        }
+    &__author {
+      color: v.$blue-600;
     }
+  }
 
-    .mobile {
-        background-color: v.$slate-800;
+  /* ------------------- */
+  // HABILIDADES
+  /* ------------------- */
 
-        &__link {
-            border-top-color: v.$slate-500;
-            color: v.$slate-500;
-
-            &--active {
-                color: v.$slate-50;
-            }
-        }
+  .skill {
+    &__title {
+      color: v.$white;
     }
-
-    .desktop {
-        &__link {
-            color: v.$slate-400;
-
-            &:hover {
-                color: v.$slate-50;
-            }
-        }
+    // &__icon {
+    //   mix-blend-mode: luminosity;
+    // }
+    &__name {
+      color: v.$white;
     }
-
-    /* ------------------- */ 
-        // INICIO
-    /* ------------------- */ 
-    .home {
-        &__heading {
-            color: v.$blue-600;
-        }
+    &__wave {
+      display: none;
+      &--dark {
+        margin-top: -1px;
+        display: initial;
+      }
     }
-
-    .words {
-        color: v.$slate-200;
-        &__text {
-            color: v.$blue-400;
-        }
+    &__degraded {
+      display: none;
+      &--dark {
+        display: initial;
+        margin-bottom: -5px;
+      }
     }
-
-    .learning {
-        &__heading,
-        &__text {
-            color: v.$gray-300;
-        }
-
-        &__box {
-            border-radius: 1.5rem;
-            background: linear-gradient(145deg, #1e2239, #232943);
-            box-shadow: 11px 11px 22px #1d2137,
-                -11px -11px 22px #252b47;
-        }
-    }
-
-    .concept {
-        &__box {
-            border-color: v.$blue-600;
-            color: v.$blue-400;
-        }
-
-        &__author {
-            color: v.$blue-600;
-        }
-    }
-
-    /* ------------------- */ 
-        // HABILIDADES
-    /* ------------------- */
-    
-    .skill {
-        &__title {
-            color: v.$gray-100;
-        }
-        &__card {
-            background-color: v.$slate-700;
-            border-color: v.$slate-500;
-        }
-        &__icon {
-            mix-blend-mode: luminosity;
-        }
-        &__name {
-            color: v.$gray-100;
-        }
-    }
+  }
 }
