@@ -1,4 +1,34 @@
+window.addEventListener('online', actualizarEstado());
+window.addEventListener('offline', actualizarEstado());
 
+function actualizarEstado() {
+    if (navigator.onLine) {
+        console.log('Si estas Conectado');
+    } else {
+        console.log('No estas conectado...');
+    }
+}
+
+// addEventListener version
+window.addEventListener('online', (event) => {
+    console.log("Ahora estás conectado a la red.");
+});
+ 
+// ononline version
+window.ononline = (event) => {
+  console.log("Ahora estás conectado a la red.");
+};
+
+
+// addEventListener version
+window.addEventListener('offline', (event) => {
+    console.log("Se ha perdido la conexión de red.");
+});
+ 
+// onoffline version
+window.onoffline = (event) => {
+  console.log("Se ha perdido la conexión de red.");
+};
 
 let modeTheme = '';
 
